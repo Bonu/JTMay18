@@ -5,6 +5,7 @@ public class ObjectDemo {
     public static void main(String[] args) {
 
         Customer customer1 = new Customer(1, "Rama", "Ayodhya", "000000000");
+        customer1 = new Customer(1, "Rama", "Ayodhya", "000000000");
         Transaction transaction1 = new Transaction(1,1000,"Verificaiton", "Customer1", "Customer2");
         System.out.println(transaction1);
         transaction1.performTransaction("xccx");
@@ -91,10 +92,10 @@ class Transaction {
 class Customer {
 
     // ----- Properties or variables-----
-    int id;
-    String name;
-    String streetAddress;
-    String telephoneNumber;
+    private int id;
+    private String name;
+    private String streetAddress;
+    private String telephoneNumber;
 
     // Constructors
 
@@ -135,4 +136,33 @@ class Customer {
         this.telephoneNumber = telephoneNumber;
     }
 
+    // ---- Getter and Setters -------------------
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getStreetAddress() {
+        return streetAddress;
+    }
+
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
+    }
+
+    public String getTelephoneNumber() {
+        return telephoneNumber;
+    }
+
+    public void setTelephoneNumber(String telephoneNumber) {
+        this.telephoneNumber = telephoneNumber;
+    }
 }
